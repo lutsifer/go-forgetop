@@ -28,6 +28,7 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/ethereum/ethash"
 	"github.com/forgetopchain/go-forgetop/accounts"
 	"github.com/forgetopchain/go-forgetop/accounts/keystore"
 	"github.com/forgetopchain/go-forgetop/common"
@@ -52,7 +53,6 @@ import (
 	"github.com/forgetopchain/go-forgetop/pow"
 	"github.com/forgetopchain/go-forgetop/rpc"
 	whisper "github.com/forgetopchain/go-forgetop/whisper/whisperv2"
-	"github.com/ethereum/ethash"
 	"gopkg.in/urfave/cli.v1"
 )
 
@@ -332,7 +332,7 @@ var (
 	ListenPortFlag = cli.IntFlag{
 		Name:  "port",
 		Usage: "Network listening port",
-		Value: 30696,
+		Value: 30777,
 	}
 	BootnodesFlag = cli.StringFlag{
 		Name:  "bootnodes",

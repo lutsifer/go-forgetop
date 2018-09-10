@@ -24,13 +24,13 @@ Section "gath" GETH_IDX
   createShortCut "$SMPROGRAMS\${APPNAME}\Uninstall.lnk" "$INSTDIR\uninstall.exe" "" "" ""
 
   # Firewall - remove rules (if exists)
-  SimpleFC::AdvRemoveRule "gath incoming peers (TCP:30696)"
-  SimpleFC::AdvRemoveRule "gath outgoing peers (TCP:30696)"
+  SimpleFC::AdvRemoveRule "gath incoming peers (TCP:30777)"
+  SimpleFC::AdvRemoveRule "gath outgoing peers (TCP:30777)"
   SimpleFC::AdvRemoveRule "gath UDP discovery (UDP:30696)"
 
   # Firewall - add rules
-  SimpleFC::AdvAddRule "gath incoming peers (TCP:30696)" ""  6 1 1 2147483647 1 "$INSTDIR\gath.exe" "" "" "forgetop" 30696 "" "" ""
-  SimpleFC::AdvAddRule "gath outgoing peers (TCP:30696)" ""  6 2 1 2147483647 1 "$INSTDIR\gath.exe" "" "" "forgetop" "" 30696 "" ""
+  SimpleFC::AdvAddRule "gath incoming peers (TCP:30777)" ""  6 1 1 2147483647 1 "$INSTDIR\gath.exe" "" "" "forgetop" 30696 "" "" ""
+  SimpleFC::AdvAddRule "gath outgoing peers (TCP:30777)" ""  6 2 1 2147483647 1 "$INSTDIR\gath.exe" "" "" "forgetop" "" 30696 "" ""
   SimpleFC::AdvAddRule "gath UDP discovery (UDP:30696)" "" 17 2 1 2147483647 1 "$INSTDIR\gath.exe" "" "" "forgetop" "" 30696 "" ""
 
   # Set default IPC endpoint (https://github.com/ethereum/EIPs/issues/147)
